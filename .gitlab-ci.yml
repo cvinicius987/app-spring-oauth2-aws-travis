@@ -9,7 +9,7 @@ eb:dev:
        - mvn clean install
        - gem install dpl
        - zip -r deploy.zip ./target/spring-oauth-aws-travis-1.0.0.jar
-       - dpl elasticbeanstalk --zip_file=deploy.zip  --region="us-east-2" --app="spring-oauth2" --env="SpringOauth2-env" --bucket-name="elasticbeanstalk-us-east-2-793313146116"
+       - dpl elasticbeanstalk --zip_file=deploy.zip  --app="spring-oauth2" --env="SpringOauth2-env" --bucket-name="elasticbeanstalk-us-east-2-793313146116"
     only:
        - master
     artifacts:
