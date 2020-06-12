@@ -1,0 +1,13 @@
+eb:dev:
+    image:ruby
+    stage:deploy
+    environment:live
+    script:
+        - apt-get update && apt-get install -y zip
+        - apt-get install default-jdk -y
+        - apt-get install maven -y
+        - mvn clean install
+        - gem install dpl
+        - zip -r deploy.zip ./target/spring-oauth-aws-travis-1.0.0.jar
+        - dpl elasticbeanstalk --zip_file=deploy.zip  --region us-west-2 --app name
+        
