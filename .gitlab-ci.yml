@@ -1,7 +1,7 @@
 eb:dev:
-    image:ruby
-    stage:deploy
-    environment:live
+    image: ruby
+    stage: deploy
+    environment: live
     script:
        - apt-get update && apt-get install -y zip
        - apt-get install default-jdk -y
