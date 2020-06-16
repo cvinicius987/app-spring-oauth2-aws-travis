@@ -1,12 +1,11 @@
 language: java
 jdk:
   - oraclejdk11
-install: true
 cache:
   directories:
   - $HOME/.m2
-before_install:
-  - chmod +x mvnw
+script:
+  - mvn install -B -V
 deploy:
   on:
     branch: master
