@@ -8,9 +8,10 @@ before_install:
   - sudo apt-get update 
 install:
   - mvn install -B -V
-script:
-  - mvn test
 deploy:
+  provider: script
+  script: 
+    - echo "Aqui AWS......";
   on:
     branch: master
 notifications:
