@@ -1,15 +1,10 @@
 language: java
 sudo: true
-dist: trusty
 jdk:
   - oraclejdk11
-before_install:
-  - chmod +x mvnw
-  - sudo apt-get update 
-  - echo "Lets's start Maven Package"
-  - mvn clean package
 script:
   - echo "Maven Package"
+  - mvn clean package
   - echo "Terminou build Maven"
 deploy:
   on:
