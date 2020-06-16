@@ -2,12 +2,11 @@ language: java
 jdk:
   - oraclejdk11
 install: true
+cache:
+  directories:
+  - $HOME/.m2
 before_install:
   - chmod +x mvnw
-script:
-  - echo "Maven Package"
-  - ./mvnw clean install
-  - echo "Terminou build Maven"
 deploy:
   on:
     branch: master
