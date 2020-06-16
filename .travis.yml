@@ -5,6 +5,9 @@ jdk:
   - oraclejdk11
 before_install:
   - chmod +x mvnw
+  - sudo apt-get update 
+  - cd app-spring-oauth2-aws-travis/
+  - echo "Entrando no diretorio"
 script:
   - echo "Maven Package"
   - echo "Terminou build Maven"
