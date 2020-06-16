@@ -6,7 +6,8 @@ jdk:
 before_install:
   - chmod +x mvnw
   - sudo apt-get update 
-  - echo "Entrando no diretorio"
+  - echo "Lets's start Maven Package"
+  - mvn clean package
 script:
   - echo "Maven Package"
   - echo "Terminou build Maven"
