@@ -1,0 +1,14 @@
+language: java
+jdk:
+  - oraclejdk8
+before_install:
+  - sudo apt-get update 
+script:
+  - echo "Maven Package"
+  - mvn clean package
+  - echo "Terminou build Maven"
+deploy:
+  on:
+    branch: master
+notifications:
+  email: false
