@@ -1,12 +1,10 @@
 language: java
-sudo: true
 jdk:
   - oraclejdk11
-before_install:
-  - chmod +x mvnw
+install: true
 script:
   - echo "Maven Package"
-  - mvn clean package
+  - ./mvnw clean install
   - echo "Terminou build Maven"
 deploy:
   on:
