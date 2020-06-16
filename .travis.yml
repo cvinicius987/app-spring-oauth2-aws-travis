@@ -2,6 +2,8 @@ language: java
 jdk:
   - oraclejdk11
 install: true
+before_install:
+  - chmod +x mvnw
 script:
   - echo "Maven Package"
   - ./mvnw clean install
