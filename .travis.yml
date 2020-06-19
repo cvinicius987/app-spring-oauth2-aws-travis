@@ -8,17 +8,16 @@ install:
   - mvn clean package -B -V
 deploy:
   provider: elasticbeanstalk
-  skip_cleanup: true
+  skip_cleanup: "true"
   app: "Spring-OAuth2"
   env: "SpringOauth2-env"
   zip_file: target/app-spring-oauth2-aws-travis-1.0.0.jar
   bucket_name: "$AWS_S3_BUCKET"
   region: "us-east-1"
   access_key_id: 
-    secure: $AWS_ACCESS_KEY_ID
-  secret_access_key:
-    secure: "$AWS_SECRET_ACCESS_KEY"
+    secure: "$AWS_ACCESS_KEY_ID"
+  secret_access_key: "$AWS_SECRET_ACCESS_KEY"
   on:
     branch: master
 notifications:
-  email: false
+  email: "false"
