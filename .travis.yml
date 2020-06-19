@@ -19,6 +19,7 @@ deploy:
   app: "Spring-OAuth2"
   bucket_name: "$AWS_S3_BUCKET"
   zip_file: deploy.zip
+  skip_cleanup: true
   on:
     branch: master
 notifications:
