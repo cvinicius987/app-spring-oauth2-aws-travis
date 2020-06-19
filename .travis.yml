@@ -7,9 +7,14 @@ cache:
 install:
   - mvn clean package -B -V
 deploy:
-  provider: script
-  script: 
-    - echo "Aqui AWS......";
+  provider: elasticbeanstalk
+  access_key_id: $AWS_ACCESS_KEY_ID
+  secret_access_key:
+    secure: "$AWS_SECRET_ACCESS_KEY"
+  region: "us-east-1"  
+  env: "SpringOauth2-env"
+  app: "Spring-OAuth2"
+  bucket_name: "$AWS_S3_BUCKET"
   on:
     branch: master
 notifications:
