@@ -15,8 +15,8 @@ deploy:
   bucket_name: "$AWS_S3_BUCKET"
   region: "us-east-1"
   access_key_id: 
-    secure: "$AWS_ACCESS_KEY_ID"
-  secret_access_key: "$AWS_SECRET_ACCESS_KEY"
+    secure: $AWS_ACCESS_KEY_ID
+  secret_access_key: $AWS_SECRET_ACCESS_KEY
   on:
     branch: master
 notifications:
